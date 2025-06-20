@@ -1,0 +1,21 @@
+<label
+  for="search-input"
+  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+  >{{ label }}</label
+>
+<div class="relative">
+  <div
+    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+  >
+    <mat-icon fontIcon="search" class="text-gray-500"></mat-icon>
+  </div>
+
+  <input
+  #search
+    id="search-input"
+    type="search"
+    [attr.placeholder]="label"
+    [className]="`${search.value ? 'text-gray-900' : 'text-gray-400'} block w-full p-4 ps-10 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500`"
+    (input)="onSearchValueChange($event)"
+  />
+</div>

@@ -1,0 +1,33 @@
+<h3
+  data-testid="variant-classification-header"
+  class="mb-4 font-semibold text-gray-900"
+>
+  Classification:
+</h3>
+<ul
+  class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
+>
+  <li
+    *ngFor="let opt of variantClassificationOptions"
+    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
+  >
+    <div class="flex items-center ps-3">
+      <input
+        [attr.data-testid]="'variant-classification-' + opt.id"
+        [id]="'variant-classification-' + opt.id"
+        type="radio"
+        [value]="opt.id"
+        [checked]="selectedClassification === opt.value"
+        name="list-radio"
+        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+        (change)="onClassificationSelected($event)"
+      />
+      <label
+        [attr.data-testid]="'variant-classification-label-' + opt.id"
+        [for]="'variant-classification-' + opt.id"
+        class="w-full py-3 ms-2 text-sm font-medium text-gray-900 cursor-pointer"
+        >{{ opt.value }}
+      </label>
+    </div>
+  </li>
+</ul>

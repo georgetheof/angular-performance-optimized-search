@@ -1,0 +1,37 @@
+<section *ngIf="variant">
+  <h2 data-testid="variant-view-name">{{ variant.name }}</h2>
+
+  <p data-testid="variant-view-gene">
+    <span class="font-semibold">Gene: </span>{{ variant.gene }}
+  </p>
+
+  <p data-testid="variant-view-location">
+    <span class="font-semibold">Location: </span>{{ variant.location }}
+  </p>
+
+  <p data-testid="variant-view-variant-type">
+    <span class="font-semibold">Variant Type: </span>{{ variant.variantType }}
+  </p>
+
+  <p data-testid="variant-view-frequency">
+    <span class="font-semibold">Frequency: </span>{{ variant.frequency }}
+  </p>
+
+  <p data-testid="variant-view-pathogenicity">
+    <span class="font-semibold">Pathogenicity: </span>
+    <span class="text-rose-600">{{ variant.pathogenicity }}</span>
+  </p>
+
+  <p data-testid="variant-view-exon">
+    <span class="font-semibold">Exon: </span>{{ variant.exon ?? "N/A" }}
+  </p>
+
+  <p data-testid="variant-view-clinical-significance">
+    <span class="font-semibold">Clinical Significance: </span
+    >{{ variant.clinicalSignificance ?? "N/A" }}
+  </p>
+
+  <p data-testid="variant-view-references">
+    <span class="font-semibold">References: </span>{{ references }}
+  </p>
+</section>

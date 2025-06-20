@@ -1,0 +1,14 @@
+<cdk-virtual-scroll-viewport
+  class="h-full"
+  (scrolledIndexChange)="onScrollIndexChange()"
+>
+  <div
+    *cdkVirtualFor="let variant of variants; trackBy: trackByVariantId"
+    [attr.data-testid]="'variant-list-item-' + variant.id"
+    class="w-full p-4 border-b border-gray-200 rounded cursor-pointer hover:bg-blue-300"
+    [class.bg-blue-600]="variant.id === selectedVariantId"
+    (click)="onVariantSelected(variant)"
+  >
+    {{ variant.name }}
+  </div>
+</cdk-virtual-scroll-viewport>
