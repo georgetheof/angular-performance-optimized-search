@@ -2,6 +2,10 @@
 
 Basic UI implementation to view a relatively large dataset.
 
+# Preview
+
+https://angular-performance-optimized-searc.vercel.app/
+
 ## Project Info ##
 
 - Sample NgRx state (with @ngrx/effects simulating API flow)
